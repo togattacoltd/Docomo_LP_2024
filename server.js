@@ -50,13 +50,113 @@ app.post('/send-email', (req, res) => {
       },
     });
 
+    const attachments = [
+      {
+        filename: '24doxho_LP-messageR_ol_01.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_01.gif'),
+        cid: 'image1@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_02.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_02.gif'),
+        cid: 'image2@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_03.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_03.gif'),
+        cid: 'image3@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_04.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_04.gif'),
+        cid: 'image4@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_05.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_05.gif'),
+        cid: 'image5@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_06.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_06.gif'),
+        cid: 'image6@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_07.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_07.gif'),
+        cid: 'image7@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_08.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_08.gif'),
+        cid: 'image8@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_09.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_09.gif'),
+        cid: 'image9@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_10.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_10.gif'),
+        cid: 'image10@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_11.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_11.gif'),
+        cid: 'image11@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_12.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_12.gif'),
+        cid: 'image12@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_13.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_13.gif'),
+        cid: 'image13@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_14.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_14.gif'),
+        cid: 'image14@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_15.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_15.gif'),
+        cid: 'image15@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_16.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_16.gif'),
+        cid: 'image16@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_17.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_17.gif'),
+        cid: 'image17@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_18.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_18.gif'),
+        cid: 'image18@id',
+      },
+      {
+        filename: '24doxho_LP-messageR_ol_19.gif',
+        path: path.join(__dirname, 'cf', '24doxho_LP-messageR_ol_19.gif'),
+        cid: 'image19@id',
+      },
+    ];
+
     let mailOptions = {
       from: '"Sender Name" chang-allen@togatta.co.jp',
-      to: 'chang-allen@togatta.co.jp',
-      subject: 'Test Email',
-      text: 'Hello World!',
+      to: 'kamo-ysmt@togatta.co.jp',
+      subject: 'docomo Test Email',
       html: htmlContent,
+      attachments: attachments
     };
+
+    console.log(mailOptions.attachments);
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
